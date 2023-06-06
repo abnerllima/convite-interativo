@@ -20,13 +20,39 @@
 
     .link-musica {
       position: absolute;
-      bottom: 16%;
-      right: 26%;
+      bottom: 29%;
+      right: 28%;
       font-size: 16px;
       color: #ffffff;
       text-decoration: none;
       background-color: rgba(0, 0, 0, 0.5);
-      padding: 70px 70px;
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    
+    .link-local {
+      position: absolute;
+      bottom: 49%;
+      right: 48%;
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    
+    .link-confirmacao {
+      position: absolute;
+      bottom: 69%;
+      right: 68%;
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 65px 65px;
       border-radius: 10px;
       z-index: 2;
     }
@@ -39,8 +65,15 @@
 
     @media (max-width: 768px) {
       .link-musica {
-        bottom: 16%;
-        right: 26%;
+        bottom: 29%;
+        right: 28%;
+      }
+      
+      .link-local {
+        top: 70%;
+      }
+      .link-confirmacao {
+        top: 50%;
       }
     }
   </style>
@@ -49,6 +82,8 @@
   <div class="container">
     <img src="imagem.png" alt="Imagem do convite">
     <a class="link-musica" href="#" onclick="playMusica()"></a>
+    <a class="link-local" href="https://goo.gl/maps/eiLX7i6wpripy86s6" target="_blank"></a>
+    <a class="link-confirmacao" href="https://api.whatsapp.com/send/?phone=553193180086&text=Ol%C3%A1%2C+gostaria+de+confirmar+minha+presen%C3%A7a+no+anivers%C3%A1rio+de+15+anos+da+Maria+Lu%C3%ADza&type=phone_number&app_absent=0" target="_blank"></a>
   </div>
   
   <audio id="musica">
