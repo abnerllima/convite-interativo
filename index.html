@@ -6,16 +6,19 @@
 <body>
   <img src="2.png" alt="Imagem 2">
   
-  <audio id="musica" autoplay>
+  <audio id="musica">
     <source src="musica.mp3" type="audio/mpeg">
     Seu navegador não suporta a reprodução de áudio.
   </audio>
   
+  <button onclick="playMusica()">Iniciar Música</button>
+  
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var audio = document.getElementById('musica');
+    var audio = document.getElementById('musica');
+
+    function playMusica() {
       audio.play();
-    });
+    }
   </script>
 </body>
 </html>
