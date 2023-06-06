@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Festa de 15 anos Maria Eduarda</title>
+  <title>Festa de 15 anos da Maria Eduarda</title>
+  <style>
+    body {
+      background-color: #202427;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    .link-musica {
+      position: absolute;
+      top: 150px;
+      left: 100px;
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <img src="2.png" alt="Imagem 2">
+  <div class="container">
+    <img src="imagem.jpg" alt="Imagem do convite">
+    <a class="link-musica" href="#" onclick="playMusica()">Clique para iniciar a música</a>
+  </div>
   
   <audio id="musica">
     <source src="musica.mp3" type="audio/mpeg">
     Seu navegador não suporta a reprodução de áudio.
   </audio>
-  
-  <button onclick="playMusica()">Iniciar Música</button>
   
   <script>
     var audio = document.getElementById('musica');
