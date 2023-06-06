@@ -20,20 +20,34 @@
 
     .link-musica {
       position: absolute;
-      top: 150px;
-      left: 100px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       font-size: 16px;
       color: #ffffff;
       text-decoration: none;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 10px 20px;
       border-radius: 5px;
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .link-musica {
+        top: 70%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="2.png" alt="Imagem do convite">
+    <img src="2.jpg" alt="Imagem do convite">
     <a class="link-musica" href="#" onclick="playMusica()">Clique para iniciar a música</a>
   </div>
   
