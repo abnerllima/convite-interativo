@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Niver da Cris</title>
+  <style>
+    body {
+      background-color: #1C2023;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    .link-musica {
+      position: absolute;
+      bottom: 29%;
+      right: 38%;
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.0);
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    
+    .link-local {
+      position: absolute;
+      bottom: 29%;
+      right: 71%;
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    
+    .link-confirmacao {
+      position: absolute;
+      bottom: 29%;
+      right: 54%;
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    
+    .link-pix {
+      position: absolute;
+      bottom: 29%;
+      right: 21%;
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .link-musica {
+        bottom: 29%;
+        right: 28%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="cris1.png" alt="Imagem do convite">
+    <a class="link-musica" href="#" onclick="playMusica()"></a>
+    <a class="link-local" href="https://goo.gl/maps/MAKkMXr6FcRg5JQJ9" target="_blank"></a>
+    <a class="link-confirmacao" href="https://api.whatsapp.com/send?phone=5531988909657&text=Oi%20Cris!%20Confirmo%20minha%20presen%C3%A7a%20no%20seu%20anivers%C3%A1rio." target="_blank"></a>
+    <a class="link-pix" href="infoscris.html"></a>
+  </div>
+  
+  <audio id="musica">
+    <source src="musicacris.mp3" type="audio/mpeg">
+    Seu navegador não suporta a reprodução de áudio.
+  </audio>
+  
+  <script>
+    var audio = document.getElementById('musica');
+
+    function playMusica() {
+      audio.play();
+    }
+   
+  </script>
+</body>
+</html>
