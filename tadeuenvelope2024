@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Festa Neon do Tadeu</title>
+  <style>
+    body {
+      background-color: #1C2023;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    
+    .link-convite {
+      position: absolute;
+      bottom: 50%;
+      right: 50%;
+      font-size: 80px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .link-musica {
+        bottom: 29%;
+        right: 28%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="tadeuenvelope.png" alt="Envelope">
+    <a class="link-convite" href="tadeuprincipal2024.html" onclick="playMusica()></a>
+  </div>
+  
+  <audio id="musica">
+    <source src="musicatadeu.mp3" type="audio/mpeg">
+    Seu navegador não suporta a reprodução de áudio.
+  </audio>
+  
+  <script>
+    var audio = document.getElementById('musica');
+
+    function playMusica() {
+      audio.play();
+    }
+   
+  </script>
+</body>
+</html>
