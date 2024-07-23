@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Festa Neon do Tadeu</title>
+  <style>
+    body {
+      background-color: #1C2023;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+    
+    .link-home {
+      position: absolute;
+      bottom: 20%;
+      right: 41%;
+      font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .link-musica {
+        bottom: 29%;
+        right: 28%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="tadeu3-2024.png" alt="Imagem do convite">
+    <a class="link-home" href="tadeu2-2024.html">VOLTAR</a>
+  </div>
+
+</body>
+</html>
