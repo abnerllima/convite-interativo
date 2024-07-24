@@ -44,12 +44,21 @@
   </audio>
   
   <script>
-    var audio = document.getElementById('musica');
+        function playMusica() {
+            var audio = document.getElementById('myAudio');
+            audio.play();
+            localStorage.setItem('isPlaying', 'true');
+            localStorage.setItem('currentTime', audio.currentTime);
+        }
 
-    function playMusica() {
-      audio.play();
-    }
-   
-  </script>
+        // Check if audio should be playing and resume from the stored time
+        window.onload = function() {
+            var audio = document.getElementById('myAudio');
+            if (localStorage.getItem('isPlaying') === 'true') {
+                audio.currentTime = localStorage.getItem('currentTime');
+                audio.play();
+            }
+        };
+    </script>
 </body>
 </html>
