@@ -79,10 +79,23 @@
     <a class="link-pix" href="tadeu3-2024.html"></a>
   </div>
   
-  <audio id="musica">
-    <source src="musicatadeu.mp3" type="audio/mpeg">
-  </audio>
-   
-  </script>
+  <audio id="myAudio" src="musicatadeu.mp3"></audio>
+
+    <script>
+        // Check if audio should be playing and resume from the stored time
+        window.onload = function() {
+            var audio = document.getElementById('myAudio');
+            if (localStorage.getItem('isPlaying') === 'true') {
+                audio.currentTime = localStorage.getItem('currentTime');
+                audio.play();
+            }
+        };
+
+        // Save the current time of the audio before the page unloads
+        window.onbeforeunload = function() {
+            var audio = document.getElementById('myAudio');
+            localStorage.setItem('currentTime', audio.currentTime);
+        };
+    </script>
 </body>
 </html>
