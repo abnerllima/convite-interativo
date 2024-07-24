@@ -51,5 +51,22 @@
     <a class="link-home" href="tadeu2-2024.html">VOLTAR</a>
   </div>
 
+  <audio id="myAudio" src="musica.mp3"></audio>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('myAudio');
+            if (localStorage.getItem('isPlaying') === 'true') {
+                audio.currentTime = localStorage.getItem('currentTime');
+                audio.play();
+            }
+        };
+
+        window.onbeforeunload = function() {
+            var audio = document.getElementById('myAudio');
+            localStorage.setItem('currentTime', audio.currentTime);
+        };
+    </script>
+  
 </body>
 </html>
