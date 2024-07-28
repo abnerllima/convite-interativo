@@ -21,7 +21,7 @@
     .link-local {
       position: absolute;
       bottom: 25%;
-      right: 58%;
+      right: 20%;
       font-size: 16px;
       color: #ffffff;
       text-decoration: none;
@@ -34,7 +34,7 @@
     .link-confirmacao {
       position: absolute;
       bottom: 25%;
-      right: 43%;
+      right: 50%;
       font-size: 16px;
       color: #ffffff;
       text-decoration: none;
@@ -47,7 +47,20 @@
     .link-pix {
       position: absolute;
       bottom: 25%;
-      right: 27%;
+      right: 35%;
+      font-size: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 65px 65px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    .link-musica {
+      position: absolute;
+      bottom: 25%;
+      right: 65%;
       font-size: 16px;
       color: #ffffff;
       text-decoration: none;
@@ -63,17 +76,13 @@
       display: block;
     }
 
-    @media (max-width: 768px) {
-      .link-musica {
-        bottom: 29%;
-        right: 28%;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="tadeu2-2024.png" alt="Imagem do convite">
+    <a class="link-musica" href="#" onClick="resumeAudio()"></a>
     <a class="link-local" href="https://goo.gl/maps/MAKkMXr6FcRg5JQJ9" target="_blank"></a>
     <a class="link-confirmacao" href="https://api.whatsapp.com/send?phone=5531993394842&text=Oi%20Tadeu!%20Confirmo%20minha%20presen%C3%A7a%20pro%20seu%20anivers%C3%A1rio." target="_blank"></a>
     <a class="link-pix" href="tadeu3-2024.html"></a>
@@ -89,6 +98,14 @@
                 audio.play();
             }
         };
+
+      function resumeAudio() {
+            var audio = document.getElementById('myAudio');
+            if (localStorage.getItem('currentTime')) {
+                audio.currentTime = localStorage.getItem('currentTime');
+            }
+            audio.play();
+        }
 
         function saveAudioState() {
             var audio = document.getElementById('myAudio');
