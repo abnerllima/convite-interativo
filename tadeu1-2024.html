@@ -39,9 +39,9 @@
 </a>
   </div>
   
-  <audio id="myAudio" src="musicatadeu.mp3"></audio>
-  
-  <script>
+  <audio id="myAudio" src="musica.mp3"></audio>
+
+    <script>
         function playMusica() {
             var audio = document.getElementById('myAudio');
             audio.play();
@@ -49,13 +49,17 @@
             localStorage.setItem('currentTime', audio.currentTime);
         }
 
-        // Check if audio should be playing and resume from the stored time
         window.onload = function() {
             var audio = document.getElementById('myAudio');
             if (localStorage.getItem('isPlaying') === 'true') {
                 audio.currentTime = localStorage.getItem('currentTime');
                 audio.play();
             }
+        };
+
+        window.onbeforeunload = function() {
+            var audio = document.getElementById('myAudio');
+            localStorage.setItem('currentTime', audio.currentTime);
         };
     </script>
 </body>
